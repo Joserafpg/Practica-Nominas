@@ -49,6 +49,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.txtcargo = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +82,7 @@
             this.label1.Location = new System.Drawing.Point(42, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 14;
             this.label1.Text = "Nombre Completo";
             // 
             // label2
@@ -88,7 +91,7 @@
             this.label2.Location = new System.Drawing.Point(42, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 15;
             this.label2.Text = "Cedula";
             // 
             // label3
@@ -97,7 +100,7 @@
             this.label3.Location = new System.Drawing.Point(42, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 16;
             this.label3.Text = "Fecha Nacimiento";
             // 
             // txtars
@@ -113,7 +116,7 @@
             this.label4.Location = new System.Drawing.Point(40, 206);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 17;
             this.label4.Text = "Cargo";
             // 
             // label5
@@ -122,7 +125,7 @@
             this.label5.Location = new System.Drawing.Point(40, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 18;
             this.label5.Text = "Sueldo bruto";
             // 
             // label6
@@ -131,7 +134,7 @@
             this.label6.Location = new System.Drawing.Point(40, 275);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 13);
-            this.label6.TabIndex = 11;
+            this.label6.TabIndex = 19;
             this.label6.Text = "ARS";
             // 
             // txtafp
@@ -139,7 +142,7 @@
             this.txtafp.Location = new System.Drawing.Point(203, 272);
             this.txtafp.Name = "txtafp";
             this.txtafp.Size = new System.Drawing.Size(57, 20);
-            this.txtafp.TabIndex = 12;
+            this.txtafp.TabIndex = 6;
             // 
             // label7
             // 
@@ -147,7 +150,7 @@
             this.label7.Location = new System.Drawing.Point(170, 275);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(27, 13);
-            this.label7.TabIndex = 13;
+            this.label7.TabIndex = 20;
             this.label7.Text = "AFP";
             // 
             // label8
@@ -156,7 +159,7 @@
             this.label8.Location = new System.Drawing.Point(289, 275);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 15;
+            this.label8.TabIndex = 21;
             this.label8.Text = "Vivienda";
             // 
             // txtvivienda
@@ -164,7 +167,7 @@
             this.txtvivienda.Location = new System.Drawing.Point(343, 272);
             this.txtvivienda.Name = "txtvivienda";
             this.txtvivienda.Size = new System.Drawing.Size(57, 20);
-            this.txtvivienda.TabIndex = 14;
+            this.txtvivienda.TabIndex = 7;
             // 
             // txtfecha
             // 
@@ -181,21 +184,21 @@
             this.dataGridView1.Location = new System.Drawing.Point(466, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(435, 186);
-            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.TabIndex = 13;
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(466, 70);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(185, 20);
-            this.textBox8.TabIndex = 17;
+            this.textBox8.TabIndex = 11;
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(679, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 18;
+            this.button1.TabIndex = 12;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -204,17 +207,17 @@
             this.button2.Location = new System.Drawing.Point(242, 368);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 45);
-            this.button2.TabIndex = 19;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Aceptar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(434, 368);
+            this.button3.Location = new System.Drawing.Point(570, 368);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(158, 45);
-            this.button3.TabIndex = 20;
+            this.button3.TabIndex = 10;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -229,11 +232,40 @@
             this.txtcargo.Size = new System.Drawing.Size(200, 21);
             this.txtcargo.TabIndex = 3;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(406, 368);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(158, 45);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Calcular";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(43, 319);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Sueldo NETO";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(147, 319);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 20);
+            this.textBox1.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.txtcargo);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -286,6 +318,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox txtcargo;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
