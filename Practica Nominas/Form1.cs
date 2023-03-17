@@ -50,6 +50,7 @@ namespace Practica_Nominas
             txtafp.Clear();
             txtvivienda.Clear();
             txtsueldo.Clear();
+            textBox1.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)
