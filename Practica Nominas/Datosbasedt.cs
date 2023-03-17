@@ -17,8 +17,8 @@ namespace Practica_Nominas
 
             Conexion.opoencon();
 
-            SqlCommand Comando = new SqlCommand(string.Format("Insert into Alumnos (Nombre, Apellido, Direccion, Fecha_nacimiento) values ('{0}','{1}','{2}','{3}')", 
-                    pget.Nombre, pget.Apellido, pget.Direccion, pget.Fecha_Nac), Conexion.ObtenerConexion());
+            SqlCommand Comando = new SqlCommand(string.Format("Insert into Empleados (Nombre, Cedula, Fecha_Nacimiento, Cargo, ARS, AFP, Vivienda, Sueldo_bruto) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')", 
+                    pget.Nombre, pget.Cedula, pget.Fecha_Nac, pget.Cargo, pget.ARS, pget.AFP, pget.Vivienda, pget.Sueldo_Bruto), Conexion.ObtenerConexion());
 
             retorno = Comando.ExecuteNonQuery();
             Conexion.cerrarcon();

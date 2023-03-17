@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Practica_Nominas
 {
@@ -11,7 +12,7 @@ namespace Practica_Nominas
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Cedula { get; set; }
-        public DateTime Fecha_Nac { get; set; }
+        public string Fecha_Nac { get; set; }
         public string Cargo { get; set; }
         public string ARS { get; set; }
         public string AFP { get; set; }
@@ -20,7 +21,7 @@ namespace Practica_Nominas
 
         public Datosget() { }
 
-        public Datosget(int pId, string pNombre, string pCedula, DateTime pFecha_Nac, string pCargo, string pARS, string pAFP, string pVivienda, string pSueldobruto)
+        public Datosget(int pId, string pNombre, string pCedula, string pFecha_Nac, string pCargo, string pARS, string pAFP, string pVivienda, string pSueldobruto)
         {
             this.Id= pId;
             this.Nombre= pNombre;
