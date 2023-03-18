@@ -17,10 +17,11 @@ Nombre varchar (50),
 Cedula varchar (50),
 Fecha_Nacimiento date,
 Cargo varchar (50),
+Sueldo_bruto varchar (500),
 ARS varchar (50), 
 AFP varchar (50),
 Vivienda varchar(50),
-Sueldo_bruto varchar (500),
+Sueldo_Neto varchar (500),
 )
 
 insert into Usuario(Nombre, Contraseña, Consultar, Registrar, Su)
