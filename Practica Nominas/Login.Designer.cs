@@ -50,6 +50,7 @@
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.Size = new System.Drawing.Size(180, 20);
             this.txtcontraseña.TabIndex = 1;
+            this.txtcontraseña.UseSystemPasswordChar = true;
             // 
             // label1
             // 

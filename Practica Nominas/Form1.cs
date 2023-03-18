@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,10 +26,11 @@ namespace Practica_Nominas
             Alumno.Cedula = txtcedula.Text;
             Alumno.Fecha_Nac = txtfecha.Text;
             Alumno.Cargo = txtcargo.Text;
+            Alumno.Sueldo_Bruto = txtsueldo.Text;
             Alumno.ARS = txtars.Text;
             Alumno.AFP = txtafp.Text;
             Alumno.Vivienda = txtvivienda.Text;
-            Alumno.Sueldo_Bruto = txtsueldo.Text;
+            Alumno.Sueldo_Neto = txtsueldoneto.Text;
 
             int resultado = Datosbasedt.Agregar(Alumno);
 
@@ -50,7 +52,7 @@ namespace Practica_Nominas
             txtafp.Clear();
             txtvivienda.Clear();
             txtsueldo.Clear();
-            textBox1.Clear();
+            txtsueldoneto.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -116,13 +118,32 @@ namespace Practica_Nominas
                 double resultado = valor4 - valor1 - valor2 - valor3;
 
                 // Mostrar el resultado en otro TextBox
-                textBox1.Text = resultado.ToString();
+                txtsueldoneto.Text = resultado.ToString();
             }
             else
             {
                 // Al menos uno de los valores no se puede convertir a un número double
                 MessageBox.Show("Uno o más valores ingresados no son válidos.");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String query = "select Nombre, Cedula, Fecha_Nacimiento, Cargo, Sueldo_Bruto, ARS, AFP, Vivienda, Sueldo_Neto from Empleados where ";
+            if (btnbuscar.Text != "")
+            {
+                query = query + "  ( Cedula like '%" + txtbuscar.Text + "%')";
+            }
+
+
+
+            Conexion.opoencon();
+            SqlCommand cmd = new SqlCommand(query, Conexion.ObtenerConexion());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dtgDatos.DataSource = ds.Tables[0];
+            Conexion.cerrarcon();
         }
     }
 }

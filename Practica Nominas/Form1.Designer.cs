@@ -43,16 +43,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtvivienda = new System.Windows.Forms.TextBox();
             this.txtfecha = new System.Windows.Forms.MaskedTextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dtgDatos = new System.Windows.Forms.DataGridView();
+            this.txtbuscar = new System.Windows.Forms.TextBox();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.txtcargo = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtsueldoneto = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtnombre
@@ -178,29 +178,30 @@
             this.txtfecha.TabIndex = 2;
             this.txtfecha.ValidatingType = typeof(System.DateTime);
             // 
-            // dataGridView1
+            // dtgDatos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(466, 106);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(435, 186);
-            this.dataGridView1.TabIndex = 13;
+            this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.Location = new System.Drawing.Point(466, 106);
+            this.dtgDatos.Name = "dtgDatos";
+            this.dtgDatos.Size = new System.Drawing.Size(435, 186);
+            this.dtgDatos.TabIndex = 13;
             // 
-            // textBox8
+            // txtbuscar
             // 
-            this.textBox8.Location = new System.Drawing.Point(466, 70);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 20);
-            this.textBox8.TabIndex = 11;
+            this.txtbuscar.Location = new System.Drawing.Point(466, 70);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(185, 20);
+            this.txtbuscar.TabIndex = 11;
             // 
-            // button1
+            // btnbuscar
             // 
-            this.button1.Location = new System.Drawing.Point(679, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnbuscar.Location = new System.Drawing.Point(679, 67);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(93, 23);
+            this.btnbuscar.TabIndex = 12;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -251,27 +252,27 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "Sueldo NETO";
             // 
-            // textBox1
+            // txtsueldoneto
             // 
-            this.textBox1.Location = new System.Drawing.Point(147, 319);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 16;
+            this.txtsueldoneto.Location = new System.Drawing.Point(147, 319);
+            this.txtsueldoneto.Name = "txtsueldoneto";
+            this.txtsueldoneto.Size = new System.Drawing.Size(200, 20);
+            this.txtsueldoneto.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtsueldoneto);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtcargo);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnbuscar);
+            this.Controls.Add(this.txtbuscar);
+            this.Controls.Add(this.dtgDatos);
             this.Controls.Add(this.txtfecha);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtvivienda);
@@ -289,7 +290,7 @@
             this.Controls.Add(this.txtnombre);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,15 +313,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtvivienda;
         private System.Windows.Forms.MaskedTextBox txtfecha;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dtgDatos;
+        private System.Windows.Forms.TextBox txtbuscar;
+        private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox txtcargo;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtsueldoneto;
     }
 }
 
