@@ -52,6 +52,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtsueldoneto = new System.Windows.Forms.TextBox();
+            this.txtdescuento = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +84,7 @@
             this.label1.Location = new System.Drawing.Point(42, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 14;
+            this.label1.TabIndex = 15;
             this.label1.Text = "Nombre Completo";
             // 
             // label2
@@ -91,7 +93,7 @@
             this.label2.Location = new System.Drawing.Point(42, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 15;
+            this.label2.TabIndex = 16;
             this.label2.Text = "Cedula";
             // 
             // label3
@@ -100,7 +102,7 @@
             this.label3.Location = new System.Drawing.Point(42, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
-            this.label3.TabIndex = 16;
+            this.label3.TabIndex = 17;
             this.label3.Text = "Fecha Nacimiento";
             // 
             // txtars
@@ -116,7 +118,7 @@
             this.label4.Location = new System.Drawing.Point(40, 206);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 17;
+            this.label4.TabIndex = 18;
             this.label4.Text = "Cargo";
             // 
             // label5
@@ -125,7 +127,7 @@
             this.label5.Location = new System.Drawing.Point(40, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 18;
+            this.label5.TabIndex = 19;
             this.label5.Text = "Sueldo bruto";
             // 
             // label6
@@ -134,7 +136,7 @@
             this.label6.Location = new System.Drawing.Point(40, 275);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 13);
-            this.label6.TabIndex = 19;
+            this.label6.TabIndex = 20;
             this.label6.Text = "ARS";
             // 
             // txtafp
@@ -150,7 +152,7 @@
             this.label7.Location = new System.Drawing.Point(170, 275);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(27, 13);
-            this.label7.TabIndex = 20;
+            this.label7.TabIndex = 21;
             this.label7.Text = "AFP";
             // 
             // label8
@@ -159,7 +161,7 @@
             this.label8.Location = new System.Drawing.Point(289, 275);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 21;
+            this.label8.TabIndex = 22;
             this.label8.Text = "Vivienda";
             // 
             // txtvivienda
@@ -184,21 +186,21 @@
             this.dtgDatos.Location = new System.Drawing.Point(466, 106);
             this.dtgDatos.Name = "dtgDatos";
             this.dtgDatos.Size = new System.Drawing.Size(435, 186);
-            this.dtgDatos.TabIndex = 13;
+            this.dtgDatos.TabIndex = 14;
             // 
             // txtbuscar
             // 
             this.txtbuscar.Location = new System.Drawing.Point(466, 70);
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(185, 20);
-            this.txtbuscar.TabIndex = 11;
+            this.txtbuscar.TabIndex = 12;
             // 
             // btnbuscar
             // 
             this.btnbuscar.Location = new System.Drawing.Point(679, 67);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(93, 23);
-            this.btnbuscar.TabIndex = 12;
+            this.btnbuscar.TabIndex = 13;
             this.btnbuscar.Text = "Buscar";
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.button1_Click);
@@ -208,7 +210,7 @@
             this.button2.Location = new System.Drawing.Point(242, 368);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(158, 45);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 9;
             this.button2.Text = "Aceptar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -218,7 +220,7 @@
             this.button3.Location = new System.Drawing.Point(570, 368);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(158, 45);
-            this.button3.TabIndex = 10;
+            this.button3.TabIndex = 11;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -238,7 +240,7 @@
             this.button4.Location = new System.Drawing.Point(406, 368);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(158, 45);
-            this.button4.TabIndex = 9;
+            this.button4.TabIndex = 10;
             this.button4.Text = "Calcular";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -246,24 +248,42 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(43, 319);
+            this.label9.Location = new System.Drawing.Point(43, 342);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 13);
-            this.label9.TabIndex = 22;
+            this.label9.TabIndex = 24;
             this.label9.Text = "Sueldo NETO";
             // 
             // txtsueldoneto
             // 
-            this.txtsueldoneto.Location = new System.Drawing.Point(147, 319);
+            this.txtsueldoneto.Location = new System.Drawing.Point(147, 342);
             this.txtsueldoneto.Name = "txtsueldoneto";
             this.txtsueldoneto.Size = new System.Drawing.Size(200, 20);
-            this.txtsueldoneto.TabIndex = 16;
+            this.txtsueldoneto.TabIndex = 17;
+            // 
+            // txtdescuento
+            // 
+            this.txtdescuento.Location = new System.Drawing.Point(147, 308);
+            this.txtdescuento.Name = "txtdescuento";
+            this.txtdescuento.Size = new System.Drawing.Size(200, 20);
+            this.txtdescuento.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(43, 308);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Descontado";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 450);
+            this.Controls.Add(this.txtdescuento);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.txtsueldoneto);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button4);
@@ -322,6 +342,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtsueldoneto;
+        private System.Windows.Forms.TextBox txtdescuento;
+        private System.Windows.Forms.Label label10;
     }
 }
 

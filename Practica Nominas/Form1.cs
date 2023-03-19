@@ -30,6 +30,7 @@ namespace Practica_Nominas
             Alumno.ARS = txtars.Text;
             Alumno.AFP = txtafp.Text;
             Alumno.Vivienda = txtvivienda.Text;
+            Alumno.Descuento = txtdescuento.Text;
             Alumno.Sueldo_Neto = txtsueldoneto.Text;
 
             int resultado = Datosbasedt.Agregar(Alumno);
@@ -57,46 +58,44 @@ namespace Practica_Nominas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //Calcular ARS//
-
-            // Obtener el valor del primer TextBox y convertirlo a double
+            //Calcular ARS//          
             if (double.TryParse(txtsueldo.Text, out double numero))
             {
-                // Multiplicar el número por 0.3
                 double resultado = numero * 0.3 / 100;
 
-                // Mostrar el resultado en el segundo TextBox
                 txtars.Text = resultado.ToString();
             }
             else
             {
-                // El valor del primer TextBox no se puede convertir a un número double
                 MessageBox.Show("El valor ingresado no es válido.");
             }
 
             //Calcular AFP//
-
-            // Obtener el valor del primer TextBox y convertirlo a double
             if (double.TryParse(txtsueldo.Text, out double numero2))
             {
-                // Multiplicar el número por 0.4
                 double resultado2 = numero2 * 0.4 / 100;
 
-                // Mostrar el resultado en el segundo TextBox
                 txtafp.Text = resultado2.ToString();
             }
 
 
             //Calcular vivienda//
 
-            // Obtener el valor del primer TextBox y convertirlo a double
             if (double.TryParse(txtsueldo.Text, out double numero3))
             {
-                // Multiplicar el número por 0.8
                 double resultado3 = numero3 * 0.8 / 100;
 
-                // Mostrar el resultado en el segundo TextBox
                 txtvivienda.Text = resultado3.ToString();
+            }
+
+            //Calcular el descuento//
+            if (double.TryParse(txtars.Text, out double suma1) &&
+               double.TryParse(txtafp.Text, out double suma2) &&
+               double.TryParse(txtvivienda.Text, out double suma3))
+            {
+                double resultado = suma1 + suma2 + suma3 ;
+
+                txtdescuento.Text = resultado.ToString();
             }
 
 
@@ -116,13 +115,11 @@ namespace Practica_Nominas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String query = "select Nombre, Cedula, Fecha_Nacimiento, Cargo, Sueldo_Bruto, ARS, AFP, Vivienda, Sueldo_Neto from Empleados where ";
+            String query = "select Nombre, Cedula, Fecha_Nacimiento, Cargo, Sueldo_Bruto, ARS, AFP, Vivienda, Descuento, Sueldo_Neto from Empleados where ";
             if (btnbuscar.Text != "")
             {
-                query = query + "  ( Cedula like '%" + txtbuscar.Text + "%')";
+                query = query + "(Nombre Like '%" + txtbuscar.Text + "%' or Cedula Like '%" + txtbuscar.Text + "%')";
             }
-
-
 
             Conexion.opoencon();
             SqlCommand cmd = new SqlCommand(query, Conexion.ObtenerConexion());

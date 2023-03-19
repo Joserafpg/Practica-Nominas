@@ -18,11 +18,12 @@ namespace Practica_Nominas
         public string ARS { get; set; }
         public string AFP { get; set; }
         public string Vivienda { get; set; }
+        public string Descuento { get; set; }
         public string Sueldo_Neto { get; set; }
 
         public Datosget() { }
 
-        public Datosget(int pId, string pNombre, string pCedula, string pFecha_Nac, string pCargo, string pSueldobruto, string pARS, string pAFP, string pVivienda, string pSueldoNeto)
+        public Datosget(int pId, string pNombre, string pCedula, string pFecha_Nac, string pCargo, string pSueldobruto, string pARS, string pAFP, string pVivienda, string pDescuento, string pSueldoNeto)
         {
             this.Id= pId;
             this.Nombre= pNombre;
@@ -33,6 +34,7 @@ namespace Practica_Nominas
             this.ARS = pARS;
             this.AFP = pAFP;
             this.Vivienda = pVivienda;
+            this.Descuento = pDescuento;
             this.Sueldo_Neto = pSueldoNeto;
         }
     }

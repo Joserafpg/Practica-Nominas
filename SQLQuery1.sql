@@ -21,6 +21,7 @@ Sueldo_bruto varchar (500),
 ARS varchar (50), 
 AFP varchar (50),
 Vivienda varchar(50),
+Descuento varchar (50),
 Sueldo_Neto varchar (500),
 )
 
