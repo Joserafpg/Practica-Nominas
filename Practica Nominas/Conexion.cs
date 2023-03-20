@@ -11,7 +11,7 @@ namespace Practica_Nominas
 {
     public class Conexion
     {
-        private static SqlConnection Conn = new SqlConnection("Data source = DESKTOP-NDDA7LS; Initial Catalog=Practica_Nominas; Integrated Security=True");
+        private static SqlConnection Conn = new SqlConnection("Data source = DESKTOP-CDKTRK2; Initial Catalog=Practica_Nominas; Integrated Security=True");
             
 
         public static SqlConnection ObtenerConexion()

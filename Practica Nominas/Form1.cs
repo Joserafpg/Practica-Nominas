@@ -54,6 +54,7 @@ namespace Practica_Nominas
             txtvivienda.Clear();
             txtsueldo.Clear();
             txtsueldoneto.Clear();
+            txtdescuento.Clear();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -80,7 +81,6 @@ namespace Practica_Nominas
 
 
             //Calcular vivienda//
-
             if (double.TryParse(txtsueldo.Text, out double numero3))
             {
                 double resultado3 = numero3 * 0.8 / 100;
@@ -100,13 +100,11 @@ namespace Practica_Nominas
 
 
             // Obtener los valores de los tres TextBox y convertirlos a double
-            if (double.TryParse(txtars.Text, out double valor1) &&
-                double.TryParse(txtafp.Text, out double valor2) &&
-                double.TryParse(txtvivienda.Text, out double valor3)&&
-                double.TryParse(txtsueldo.Text, out double valor4))
+            if (decimal.TryParse(txtsueldo.Text, out decimal valor4) &&
+                decimal.TryParse(txtdescuento.Text, out decimal valor5))
             {
                 // Restar los valores de los tres TextBox
-                double resultado = valor4 - valor1 - valor2 - valor3;
+                decimal resultado = valor4 - valor5;
 
                 // Mostrar el resultado en otro TextBox
                 txtsueldoneto.Text = resultado.ToString();
@@ -128,6 +126,11 @@ namespace Practica_Nominas
             da.Fill(ds);
             dtgDatos.DataSource = ds.Tables[0];
             Conexion.cerrarcon();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
